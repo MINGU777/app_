@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         String str2 = eText2.getText().toString();
         eTextView2.setText("패스워드:" + str2);
         String str3 = eText3.getText().toString();
-        eTextView3.setText("전화번호" + str3);ㅏ
+        eTextView3.setText("전화번호:" + str3);
 
 
 
