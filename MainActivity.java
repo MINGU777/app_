@@ -1,4 +1,4 @@
-package com.example.onehour;
+package com.example.adit;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
+    private int scaleTyeIndex = 0;
 
 
 
@@ -50,8 +51,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeScaleType(View view) {
+        ImageView.ScaleType[] scaleTypes = {
+                ImageView.ScaleType.CENTER,
+                ImageView.ScaleType.CENTER_CROP,
+                ImageView.ScaleType.CENTER_INSIDE,
+                ImageView.ScaleType.FIT_CENTER,
+                ImageView.ScaleType.FIT_XY
 
-        
+        };
+
+        imageView.setScaleType(scaleTypes[scaleTyeIndex]);
+        scaleTyeIndex = (scaleTyeIndex+1)%scaleTypes.length;
+
+
 
 
     }
